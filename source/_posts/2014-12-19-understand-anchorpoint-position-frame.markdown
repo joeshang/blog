@@ -1,6 +1,6 @@
 ---
 layout: post
-title: anchorPoint，position，frame的关系
+title: 理解anchorPoint，position，frame的关系
 date: 2014-12-19 21:20:06 +0800
 comments: true
 categories: iOS-Recipe
@@ -18,7 +18,7 @@ categories: iOS-Recipe
 
 但是对于`center`，CALayer对应项是`position`，为什么不同名了呢？因为`position`更灵活，谁规定“指定UIView在superview中的位置坐标”一定要在UIView的中心位置呢？！而`position`默认在中心位置的目的我觉得是为了方便Rotation，因为一般Rotation都是绕着中心旋转，UIView为了简化使用，满足大部分情况即可，所以就将默认在中心的`position`封装成了`center`。
 
-由于CALayer的`position`并没有限制一定要在中心位置，所以就需要一个属性来描述`position`在UIView中的位置，于是`anchorPoint`出现了，CALayer用`anchorPoint`指定`position`在Layer中的位置，有如下特点：
+由于CALayer的`position`并没有限制一定要在`bounds`的中心位置，所以就需要一个属性来描述`position`在`bounds`中的位置，这样才能推算出`frame`的origin点位置。于是`anchorPoint`出现了，**CALayer用`anchorPoint`指定`position`在`bounds`中的位置**，有如下特点：
 
 - 为了可以任意指定位置，因此`anchorPoint`就不使用绝对值，而是比例值。
 - 由于Rotation总是围绕`position`旋转，因此指定`position`在Layer中位置的`anchorPoint`就被命名为**锚点**（像船的锚一样固定位置）。

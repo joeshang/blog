@@ -71,8 +71,8 @@ categories: iOS-Architecture
 接口类，相当于组合模式中的Component，在Objective-C中用协议描述。
 
 - `(void)runWithCompletion:(SCRAnimationCompletionBlock)completion`：动画的核心就是运行，而为了能够形成链，所以增加了completion参数用来形成链。
-- `(NSTimeInterval)workTime`：在并行动画中需要找到最终结束时间最长的那个动画，这样才能将并行动画
-- `(void)addAction:(id<SCRAnimationActionProtocol>)action`
+- `(NSTimeInterval)workTime`：在并行动画中需要找到最终结束时间最长的那个动画，这样才能在并行动画中将动画链传递下去。
+- `(void)addAction:(id<SCRAnimationActionProtocol>)action`：用来供容器添加动画Action。
 
 ### SCRAnimationAction
 

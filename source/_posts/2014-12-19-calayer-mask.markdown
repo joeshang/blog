@@ -14,7 +14,7 @@ CALayer拥有`mask`属性，Apple的官方解释如下：
 
 需要注意的是：
 
-1. MaskLayer的color不重要，主要使用alpha，但是注意`[UIColor clearColor]`其实就是alpha为0的color。
+1. MaskLayer的color不重要，主要使用opacity（CALayer中的alpha），但是注意`[UIColor clearColor]`其实就是alpha为0的color。
 2. ContentLayer超出MaskLayer以外的部分不会被显示出来。
 3. MaskLayer必须是个“单身汉”，不能有sublayers，否则蒙版（Masking）的结果就是未知（Undefined）。
 
