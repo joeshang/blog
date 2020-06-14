@@ -1,7 +1,7 @@
 ---
 layout: 
 title: CNAME 有什么用？
-date: 2020-06-14 17:01:44
+date: 2020-05-30 17:01:44
 categories: Network
 tags:
 ---

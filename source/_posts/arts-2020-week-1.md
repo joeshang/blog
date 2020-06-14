@@ -61,6 +61,6 @@ public:
 3. Swift 会对其符号进行修饰（Name Mangling），具体原理见：[mikeash.com: Friday Q&A 2014-08-15: Swift Name Mangling](https://mikeash.com/pyblog/friday-qa-2014-08-15-swift-name-mangling.html)。在 Bugly 上，如果崩溃在 Swift 方法中，被修饰过的命名就很难读了。Xcode 提供了对 Swift 符号进行 demangling 的工具，在命令行输入 `xcrun swift-demangle`之后，将对应的 Swift 符号拷入，点回车，就能看到解析后的结果了
 
 ## Share
-[CNAME 有什么用？](http://joeshang.github.io/2020/06/14/cname-explain/)
+[CNAME 有什么用？](https://joeshang.github.io/2020/06/14/cname-explain/)
 
 

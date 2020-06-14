@@ -11,7 +11,7 @@ Copying 在 iOS 中有很多概念，例如浅拷贝与深拷贝、copy 与 muta
 
 对于浅拷贝（Swallow Copy）与深拷贝（Deep Copy），经常看到这样的说法：`浅复制是指针拷贝，仅仅拷贝指向对象的指针；深复制是内容拷贝，会拷贝对象本身。` 这句话并没有说错，但需要注意的是**指针/内容拷贝针对的是谁**，无论浅拷贝还是深拷贝，被拷贝的对象都会被复制一份，有新的对象产生，而在复制对象的内容时，对于被拷贝对象中的指针类型的成员变量，浅拷贝只是复制指针，而深拷贝除了复制指针外，会复制指针指向的内容。下面我们以 Apple 官方文档中的图片进行说明：
 
-![Object Copy](images/blog/ios-object-copy.png)
+![Object Copy](/images/blog/ios-object-copy.png)
 
 对普通对象 ObjectA 进行 copy，无论浅拷贝还是深拷贝，都会复制出一个新的对象 ObjectB，只是浅拷贝时 ObjectA 与 ObjectB 中的 textColor 指针还指向同一个 NSColor 对象，而深拷贝时 ObjectA 和 ObjectB 中的 textColor 指针分别指向各自的 NSColor 对象（NSColor 对象被复制了一份）。
 
