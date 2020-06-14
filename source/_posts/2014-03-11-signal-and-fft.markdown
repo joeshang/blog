@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 理解傅立叶变换
 date: 2014-03-11 09:23:27 +0800
 comments: true
@@ -17,7 +16,7 @@ categories: Electronics
 
 ![Smoothie to recipe](/images/blog/2014-03-11-smoothie-to-recipe.png)
 
-总之，对果汁牛奶进行傅立叶变换后，我们的视角（perspective）从消费者变成了生产者，从“What did i see"变成了“How was it made”，Recipe比Object本身更容易进行分析、比较、修改。
+总之，对果汁牛奶进行傅立叶变换后，我们的视角（perspective）从消费者变成了生产者，从 “What did i see” 变成了 “How was it made”，Recipe 比 Object 本身更容易进行分析、比较、修改。
 
 > 所谓“变换”，就是换个领域看问题（A Change Of Perspective），将某种情况下不易分析处理的领域换成易分析处理的领域
 
@@ -26,7 +25,7 @@ categories: Electronics
 ![fft](/images/blog/2014-03-11-fft.gif)
 
 1. 任何连续周期信号都可以由一组适当的正弦曲线组合而成（这些正弦曲线通过叠加逼近，直至误差可以忽略）
-2. 连续周期信号的表象是时域（time domain）波形，从时域上，我们很难进行分析、处理，因此我们需要从另外一个维度去分析信号，而傅立叶变换就是**将信号从时域（Observations In The Time Domain）转换到频域（Ingredients In The Frequency Domain）**。为什么要到频域呢？频率只是信号的一个特征，但是它可以用来识别信号，在频域可以得到信号的成分（ingredients），就像果汁牛奶一样，Recipe比Object本身更容易分析、比较、修改
+2. 连续周期信号的表象是时域（time domain）波形，从时域上，我们很难进行分析、处理，因此我们需要从另外一个维度去分析信号，而傅立叶变换就是**将信号从时域（Observations In The Time Domain）转换到频域（Ingredients In The Frequency Domain）**。为什么要到频域呢？频率只是信号的一个特征，但是它可以用来识别信号，在频域可以得到信号的成分（ingredients），就像果汁牛奶一样，Recipe 比 Object 本身更容易分析、比较、修改
 
 ## 分离信号与傅立叶变换的应用
 
@@ -49,3 +48,4 @@ categories: Electronics
 - [《漫画傅立叶解析》](http://pan.baidu.com/share/link?shareid=287356&uk=4160997052)
 - [如何直观形象、生动有趣地给文科学生介绍傅立叶变换？](http://www.zhihu.com/question/19991026)
 - [傅里叶变换是用来做什么的，具体举例一下应用？](http://www.zhihu.com/question/20460630)
+
