@@ -1,11 +1,12 @@
-title: Xcode升级后插件失效的原理与修复办法
+---
+title: Xcode 升级后插件失效的原理与修复办法
 date: 2015-04-10 17:55:37
-categories: iOS-Tools
+categories: iOS
 ---
 
 Xcode 的插件大大丰富了 Xcode 的功能，而且有了 [Alcatraz](https://github.com/supermarin/Alcatraz) ，插件的管理也非常容易，像我这种 Vim 党完全离不开 [XVim](https://github.com/XVimProject/XVim)。但是有个非常恼人的问题：一旦升级 Xcode ，插件就失效！
 
-之前 Xcode 升级到6.2的时候遇到过插件失效的问题，Google 之后把一段很长命令复制到 Terminal 后运行一下即可，当时一看解决了，顿时觉得满足感爆棚，自己可以拯救地球了~就没有再深入，结果升级到6.3时又遇到了。“同样的招式对圣斗士是不能使用第二次的！”，同样的坑对有节操的程序员是不能掉进去第二次的！因此这一次一定要搞清楚为什么会这样，以后再次遇到了如何解决。
+之前 Xcode 升级到 6.2 的时候遇到过插件失效的问题，Google 之后把一段很长命令复制到 Terminal 后运行一下即可，当时一看解决了，顿时觉得满足感爆棚，自己可以拯救地球了~就没有再深入，结果升级到 6.3 时又遇到了。“同样的招式对圣斗士是不能使用第二次的！”，同样的坑对有节操的程序员是不能掉进去第二次的！因此这一次一定要搞清楚为什么会这样，以后再次遇到了如何解决。
 
 ### 问题原因
 
@@ -32,3 +33,4 @@ Xcode 的插件放置在 `~/Library/Application\ Support/Developer/Shared/Xcode/
 find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
 ```
 在 Terminal 中运行上述命令就解决了插件失效的问题，在插件 Info.plist 的 DVTPlugInCompatibilityUUIDs 中也能看到新增的 UUID 了。
+
