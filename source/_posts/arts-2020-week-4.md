@@ -1,0 +1,23 @@
+---
+layout: title
+title: ARTS 2020 Week 4：06.15-06.21
+date: 2020-06-21 23:15:05
+tags:
+categories: ARTS
+---
+## Algorithm
+[Validate Binary Search Tree - LeetCode](https://leetcode.com/problems/validate-binary-search-tree/)
+
+比较简单，二叉搜索树的特性是节点的左子树小于节点的值，右子树大于节点的值。本质就是二叉树中序遍历的应用，中序遍历二叉搜索树得到的数组一定是有序的。
+
+## Review
+[Understanding Swift Performance - WWDC 2016 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2016/416/)
+没看完，主要看了 Allocation 和 Dispatch 部分，准备看完后写一个 Swift 性能相关的文章，嗯，下周的 Share 有了。。。
+
+## Tips
+1. 如何从远端 Git 仓库中拉取某个制定文件：[git - Retrieve a single file from a repository - Stack Overflow](https://stackoverflow.com/questions/1125476/retrieve-a-single-file-from-a-repository)
+2. 使用 Fastlane 快速更新 Push 证书：`fastlane pem -a bundle_id -u username -p "password" --force --development`
+
+## Share
+[重构技巧：Parser 与多态](https://joeshang.github.io/2020/06/20/refactor-parser-and-polymorphism/)
+
